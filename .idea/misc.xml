@@ -6,9 +6,16 @@
         <entry key="..\:/Kuliah/SEMESTER 5/MOBPROG/UTS/ProjectUTS/app/src/main/res/drawable/bgbtn.xml" value="0.30885416666666665" />
         <entry key="..\:/Kuliah/SEMESTER 5/MOBPROG/UTS/ProjectUTS/app/src/main/res/drawable/bguniversal.xml" value="0.22135416666666666" />
         <entry key="..\:/Kuliah/SEMESTER 5/MOBPROG/UTS/ProjectUTS/app/src/main/res/drawable/buttonbg.xml" value="0.21770833333333334" />
+        <entry key="..\:/Kuliah/SEMESTER 5/MOBPROG/UTS/ProjectUTS/app/src/main/res/drawable/drink_item_layout.xml" value="0.22135416666666666" />
         <entry key="..\:/Kuliah/SEMESTER 5/MOBPROG/UTS/ProjectUTS/app/src/main/res/drawable/ellipsheader1.xml" value="0.22135416666666666" />
+        <entry key="..\:/Kuliah/SEMESTER 5/MOBPROG/UTS/ProjectUTS/app/src/main/res/drawable/snacks_item_layout.xml" value="0.22135416666666666" />
         <entry key="..\:/Kuliah/SEMESTER 5/MOBPROG/UTS/ProjectUTS/app/src/main/res/layout-v28/activity_main.xml" value="0.29270833333333335" />
-        <entry key="..\:/Kuliah/SEMESTER 5/MOBPROG/UTS/ProjectUTS/app/src/main/res/layout/activity_main.xml" value="0.5341296928327645" />
+        <entry key="..\:/Kuliah/SEMESTER 5/MOBPROG/UTS/ProjectUTS/app/src/main/res/layout/activity_drinks_page.xml" value="0.20520833333333333" />
+        <entry key="..\:/Kuliah/SEMESTER 5/MOBPROG/UTS/ProjectUTS/app/src/main/res/layout/activity_foods_page.xml" value="0.35260416666666666" />
+        <entry key="..\:/Kuliah/SEMESTER 5/MOBPROG/UTS/ProjectUTS/app/src/main/res/layout/activity_main.xml" value="0.67" />
+        <entry key="..\:/Kuliah/SEMESTER 5/MOBPROG/UTS/ProjectUTS/app/src/main/res/layout/activity_snacks_page.xml" value="0.20520833333333333" />
+        <entry key="..\:/Kuliah/SEMESTER 5/MOBPROG/UTS/ProjectUTS/app/src/main/res/layout/food_item_layout.xml" value="0.20520833333333333" />
+        <entry key="..\:/Kuliah/SEMESTER 5/MOBPROG/UTS/ProjectUTS/app/src/main/res/layout/foods.xml" value="0.25" />
       </map>
     </option>
   </component>

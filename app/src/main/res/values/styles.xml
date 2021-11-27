@@ -24,4 +24,58 @@
         </item>
 
     </style>
+
+    <style name="binus1">
+
+        <item name="android:textSize">
+            36sp
+        </item>
+
+        <item name="android:textColor">
+            #FFFFFF
+        </item>
+
+    </style>
+
+    <style name="ezyfoody1">
+
+        <item name="android:textSize">
+            36sp
+        </item>
+
+        <item name="android:textColor">
+            #FFFFFF
+        </item>
+
+    </style>
+
+    <style name="categoryheadertext">
+        <item name="android:textSize">
+            64sp
+        </item>
+        <item name="android:textColor">
+            #FFFFFF
+        </item>
+    </style>
+
+    <style name="contentstyles">
+        <item name="android:textSize">
+            24sp
+        </item>
+        <item name="android:textColor">
+            #2E2C2F
+        </item>
+        <item name="android:textStyle">
+            bold
+        </item>
+        <item name="android:textAllCaps">
+            false
+        </item>
+        <item name="android:textAlignment">
+            center
+        </item>
+        <item name="android:fontFamily">
+            sans-serif
+        </item>
+    </style>
 </resources>

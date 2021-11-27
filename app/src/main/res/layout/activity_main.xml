@@ -15,11 +15,11 @@
         android:layout_width="506dp"
         android:layout_height="266dp"
 
-        android:layout_centerInParent="true"
         android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
         android:layout_marginLeft="-100dp"
-        android:layout_marginRight="-100dp"
         android:layout_marginTop="-94dp"
+        android:layout_marginRight="-100dp"
         android:background="@drawable/ellipsheader1" />
 
     <!--header binus-->
@@ -42,32 +42,31 @@
         android:id="@+id/ezyfoody"
         android:layout_width="216dp"
         android:layout_height="65dp"
-        android:layout_centerInParent="true"
         android:layout_alignParentTop="true"
 
+        android:layout_centerInParent="true"
         android:layout_marginTop="70dp"
-        android:text="@string/ezyfoody"
-        android:textAppearance="@style/ezyfoody"
         android:gravity="top"
-        />
+        android:text="@string/ezyfoody"
+        android:textAppearance="@style/ezyfoody" />
 
     <!--  wat ar yu craving text-->
     <TextView
         android:id="@+id/quoteTxt"
 
-        android:layout_centerInParent="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="200dp"
-
         android:layout_width="400dp"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+
+        android:layout_centerInParent="true"
+        android:layout_marginTop="200dp"
 
         android:text="@string/what_are_you_craving_right_now"
-        android:textColor="#FFFFFF"
-        android:textStyle="italic"
-        android:textSize="30sp"
         android:textAlignment="center"
-        />
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:textStyle="italic"
+        tools:ignore="TextContrastCheck" />
 
     <!--grid btns-->
     <androidx.gridlayout.widget.GridLayout
@@ -83,66 +82,63 @@
 
         <Button
             android:id="@+id/drinkBtn"
-            android:layout_width="180dp"
-            android:layout_height="180dp"
+            android:layout_width="166dp"
+            android:layout_height="166dp"
             android:layout_margin="10dp"
-            android:textAllCaps="false"
 
             android:background="@drawable/buttonbg"
-            android:backgroundTint="#ECFFB0"
             android:text="@string/drinks"
-            android:textAlignment="center"
-            android:textColor="#000000"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:layout_row="0"
+            android:textAppearance="@style/contentstyles"
+
+            android:drawableTop="@drawable/cafe_24px"
+
+            android:drawableTint="#2E2C2F"
+
             app:layout_column="0"
-            />
+            app:layout_row="0" />
 
         <Button
             android:id="@+id/snackBtn"
-            android:layout_width="180dp"
-            android:layout_height="180dp"
+            android:layout_width="166dp"
+            android:layout_height="166dp"
             android:layout_margin="10dp"
-            android:textAllCaps="false"
 
             android:background="@drawable/buttonbg"
             android:text="@string/snacks"
-            android:textColor="#000000"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:layout_row="0"
-            app:layout_column="1"/>
+            android:textAppearance="@style/contentstyles"
+
+            app:layout_column="1"
+            app:layout_row="0" />
 
         <Button
             android:id="@+id/foodBtn"
-            android:layout_width="180dp"
-            android:layout_height="180dp"
+            android:layout_width="166dp"
+            android:layout_height="166dp"
             android:layout_margin="10dp"
-            android:background="@drawable/buttonbg"
-            android:textAllCaps="false"
 
+            android:background="@drawable/buttonbg"
             android:text="@string/food"
-            android:textColor="#000000"
-            android:textSize="20sp"
-            android:textStyle="bold"
+            android:textAppearance="@style/contentstyles"
+
+
             app:layout_column="0"
             app:layout_row="1" />
 
         <Button
             android:id="@+id/topupBtn"
-            android:layout_width="180dp"
-            android:layout_height="180dp"
-            android:layout_margin="10dp"
-            android:background="@drawable/buttonbg"
+            android:layout_width="166dp"
+            android:layout_height="166dp"
 
-            android:textAllCaps="false"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/buttonbg"
             android:text="@string/topup"
-            android:textColor="#000000"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:layout_row="1"
-            app:layout_column="1"/>
+            android:textAppearance="@style/contentstyles"
+            app:layout_column="1"
+            app:layout_row="1" />
 
     </androidx.gridlayout.widget.GridLayout>
 
