@@ -34,7 +34,7 @@ public class SnackAdapter extends RecyclerView.Adapter<SnackAdapter.SnacksViewHo
     @Override
     public void onBindViewHolder(@NonNull SnackAdapter.SnacksViewHolder holder, int position) {
         HashMap<String, String>snackMap = snackList.get(position);
-        holder.snacksBtnLayout.setText(snackMap.get("DrinkName") + "\n" + "Rp "+ snackMap.get("DrinkPrice"));
+        holder.snacksBtnLayout.setText(snackMap.get("SnackName") + "\n" + "Rp "+ snackMap.get("SnackPrice"));
 
     }
 
