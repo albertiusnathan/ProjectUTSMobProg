@@ -74,22 +74,29 @@
         android:layout_width="wrap_content"
         android:layout_height="450dp"
 
+        android:shadowColor="@color/black"
+        android:shadowDx="-7"
+        android:shadowDy="8"
+        android:shadowRadius="14"
+        android:outlineAmbientShadowColor="@color/black"
+        
         android:layout_alignParentTop="true"
         android:layout_centerInParent="true"
         android:layout_marginTop="300dp"
         app:alignmentMode="alignBounds"
         app:columnCount="2"
         app:rowCount="2">
-
+    
         <Button
             android:id="@+id/drinkBtn"
             android:layout_width="180dp"
             android:layout_height="180dp"
             android:layout_margin="10dp"
-            android:textAllCaps="false"
+            android:elevation="14dp"
 
             android:background="@drawable/buttonbg"
             android:backgroundTint="#ECFFB0"
+
             android:text="@string/drinks"
             android:textAlignment="center"
             android:textColor="#000000"
@@ -97,15 +104,16 @@
             android:textStyle="bold"
             app:layout_row="0"
             app:layout_column="0"
-            />
+            >
+            imageView
+        </Button>
 
         <Button
             android:id="@+id/snackBtn"
             android:layout_width="180dp"
             android:layout_height="180dp"
             android:layout_margin="10dp"
-            android:textAllCaps="false"
-
+            
             android:background="@drawable/buttonbg"
             android:text="@string/snacks"
             android:textColor="#000000"
@@ -120,8 +128,6 @@
             android:layout_height="180dp"
             android:layout_margin="10dp"
             android:background="@drawable/buttonbg"
-            android:textAllCaps="false"
-
             android:text="@string/food"
             android:textColor="#000000"
             android:textSize="20sp"
@@ -135,8 +141,6 @@
             android:layout_height="180dp"
             android:layout_margin="10dp"
             android:background="@drawable/buttonbg"
-
-            android:textAllCaps="false"
             android:text="@string/topup"
             android:textColor="#000000"
             android:textSize="20sp"

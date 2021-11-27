@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">ProjectUTS</string>
+    <string name="binus">BINUS</string>
+    <string name="ezyfoody">EzyFoody</string>
+    <string name="what_are_you_craving_right_now">What are you craving right now?</string>
+    <string name="drinks">Drinks</string>
+    <string name="snacks">Snacks</string>
+    <string name="food">Foods</string>
+    <string name="topup">Top Up</string>
 </resources>

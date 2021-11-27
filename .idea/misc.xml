@@ -3,7 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Kuliah/SEMESTER 5/MOBPROG/UTS/ProjectUTS/app/src/main/res/layout/activity_main.xml" value="0.35260416666666666" />
+        <entry key="..\:/Kuliah/SEMESTER 5/MOBPROG/UTS/ProjectUTS/app/src/main/res/drawable/bgbtn.xml" value="0.30885416666666665" />
+        <entry key="..\:/Kuliah/SEMESTER 5/MOBPROG/UTS/ProjectUTS/app/src/main/res/drawable/bguniversal.xml" value="0.22135416666666666" />
+        <entry key="..\:/Kuliah/SEMESTER 5/MOBPROG/UTS/ProjectUTS/app/src/main/res/drawable/buttonbg.xml" value="0.21770833333333334" />
+        <entry key="..\:/Kuliah/SEMESTER 5/MOBPROG/UTS/ProjectUTS/app/src/main/res/drawable/ellipsheader1.xml" value="0.22135416666666666" />
+        <entry key="..\:/Kuliah/SEMESTER 5/MOBPROG/UTS/ProjectUTS/app/src/main/res/layout-v28/activity_main.xml" value="0.29270833333333335" />
+        <entry key="..\:/Kuliah/SEMESTER 5/MOBPROG/UTS/ProjectUTS/app/src/main/res/layout/activity_main.xml" value="0.5341296928327645" />
       </map>
     </option>
   </component>
