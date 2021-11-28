@@ -1,6 +1,7 @@
 package com.mobprog.projectuts;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,10 +37,24 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodsViewHolde
         HashMap<String, String>foodMap = foodList.get(position);
         holder.foodLayoutBtn.setText(foodMap.get("FoodName") + "\n" + "Rp "+ foodMap.get("FoodPrice"));
 
+        //set clicklistener btn
+        holder.foodLayoutBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent food_orderIntent = new Intent(context, OrderPage.class);
+
+                food_orderIntent.putExtra("OrderName", foodMap.get("FoodName"));
+                food_orderIntent.putExtra("OrderPrice", foodMap.get("FoodPrice"));
+
+                ((FoodsPage) context).startActivity(food_orderIntent);;
+            }
+        });
+
     }
 
     @Override
     public int getItemCount() {
+
         return foodList.size();
     }
 

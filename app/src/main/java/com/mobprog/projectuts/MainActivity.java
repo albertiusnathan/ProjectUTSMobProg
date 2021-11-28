@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button foodBtn, snackBtn, drinksBtn;
+    Button foodBtn, snackBtn, drinksBtn, myOrders;
 
     //need rework
 //    private void hideNavigationBar(){
@@ -64,7 +64,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
+        //myorders
+        myOrders = findViewById(R.id.shoppingbag);
+        myOrders.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent orderIntent = new Intent(MainActivity.this, MyOrders_Page.class);
+                startActivity(orderIntent);
+            }
+        });
 
     }
 }

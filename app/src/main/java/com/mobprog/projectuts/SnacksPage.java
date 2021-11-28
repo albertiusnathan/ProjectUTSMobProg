@@ -4,7 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -14,6 +17,7 @@ public class SnacksPage extends AppCompatActivity {
     ArrayList<HashMap>snackList = new ArrayList();
     RecyclerView snackRecycler;
     SnackAdapter snackAdapter;
+    Button myOrders;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,8 +59,17 @@ public class SnacksPage extends AppCompatActivity {
         snackList.add(snack6);
 
 
-        snackAdapter = new SnackAdapter(getApplicationContext(), snackList);
+        snackAdapter = new SnackAdapter(SnacksPage.this, snackList);
         snackRecycler.setLayoutManager(new GridLayoutManager(this, 2));
         snackRecycler.setAdapter(snackAdapter);
+
+        myOrders = findViewById(R.id.shoppingbag);
+        myOrders.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent orderIntent = new Intent(SnacksPage.this, MyOrders_Page.class);
+                startActivity(orderIntent);
+            }
+        });
     }
 }

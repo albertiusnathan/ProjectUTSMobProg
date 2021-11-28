@@ -1,6 +1,7 @@
 package com.mobprog.projectuts;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,6 +37,17 @@ public class DrinksAdapter extends RecyclerView.Adapter<DrinksAdapter.DrinksView
         HashMap<String, String>drinkMap = drinkList.get(position);
         holder.drinksBtnLayout.setText(drinkMap.get("DrinkName") + "\n" + "Rp "+ drinkMap.get("DrinkPrice"));
 
+        holder.drinksBtnLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent drink_orderIntent = new Intent(context, OrderPage.class);
+
+                drink_orderIntent.putExtra("OrderName", drinkMap.get("DrinkName"));
+                drink_orderIntent.putExtra("OrderPrice", drinkMap.get("DrinkPrice"));
+
+                ((DrinksPage) context).startActivity(drink_orderIntent);;
+            }
+        });
     }
 
     @Override

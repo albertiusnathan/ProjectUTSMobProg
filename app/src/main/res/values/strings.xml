@@ -7,4 +7,11 @@
     <string name="snacks">Snacks</string>
     <string name="food">Foods</string>
     <string name="topup">Top Up</string>
+    <string name="myorderHeader">MyOrder</string>
+    <string name="pay_now">Pay Now</string>
+    <string name="total"> Total : Rp </string>
+    <string name="delete">Delete</string>
+    <string name="orderHeader">Order</string>
+    <string name="order_more">Order More</string>
+    <string name="quantity">Quantity</string>
 </resources>

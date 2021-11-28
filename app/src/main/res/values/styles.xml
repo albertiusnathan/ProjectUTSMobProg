@@ -78,4 +78,47 @@
             sans-serif
         </item>
     </style>
+
+    <style name="payNowBtn">
+        <item name="android:textColor">
+            #F09942
+        </item>
+        <item name="android:textAllCaps">
+            false
+        </item>
+        <item name="android:textSize">
+            15sp
+        </item>
+        <item name="android:textAlignment">
+            center
+        </item>
+        <item name="android:textStyle">
+            bold
+        </item>
+        <item name="android:fontFamily">
+            sans-serif-medium
+        </item>
+    </style>
+
+    <style name="totalCost">
+        <item name="android:textColor">
+            #ffffff
+        </item>
+        <item name="android:textAllCaps">
+            false
+        </item>
+        <item name="android:textSize">
+            30sp
+        </item>
+        <item name="android:textAlignment">
+            center
+        </item>
+        <item name="android:textStyle">
+            bold
+        </item>
+        <item name="android:fontFamily">
+            sans-serif
+        </item>
+    </style>
+
 </resources>
