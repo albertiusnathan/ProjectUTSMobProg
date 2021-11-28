@@ -18,7 +18,6 @@ public class FoodsPage extends AppCompatActivity {
     RecyclerView foodRecycler;
     FoodAdapter foodAdapter;
     Button myOrders;
-    Button foodOrder;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

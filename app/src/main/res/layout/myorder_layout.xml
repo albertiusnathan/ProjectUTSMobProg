@@ -22,14 +22,27 @@
                 android:textColor="#2E2C2F"
                 android:textSize="20sp"
                 />
-            <TextView
-                android:id="@+id/Itemprice"
-                android:layout_width="240dp"
+            <LinearLayout
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textStyle="normal"
-                android:textColor="#FFFFFF"
-                android:textSize="20sp"
-                />
+            >
+                <TextView
+                    android:id="@+id/itemPrice"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:textStyle="normal"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    />
+                <TextView
+                    android:id="@+id/itemQty"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:textStyle="normal"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    />
+            </LinearLayout>
         </LinearLayout>
 
 

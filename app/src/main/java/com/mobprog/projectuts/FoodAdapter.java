@@ -46,7 +46,7 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodsViewHolde
                 food_orderIntent.putExtra("OrderName", foodMap.get("FoodName"));
                 food_orderIntent.putExtra("OrderPrice", foodMap.get("FoodPrice"));
 
-                ((FoodsPage) context).startActivity(food_orderIntent);;
+                ((FoodsPage) context).startActivity(food_orderIntent);
             }
         });
 

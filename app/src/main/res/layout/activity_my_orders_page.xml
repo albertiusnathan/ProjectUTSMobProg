@@ -80,7 +80,7 @@
     </RelativeLayout>
 
 
-    <!--grid btns-->
+    <!--linear list-->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/myOrderRecyclerView"
         android:layout_width="match_parent"

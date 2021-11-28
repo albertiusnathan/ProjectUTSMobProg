@@ -1,20 +1,28 @@
 package com.mobprog.projectuts;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 public class OrderPage extends AppCompatActivity {
-    Integer qty;
+
     Button myOrders, orderMore;
+    EditText edittxtQty;
+
+    ArrayList<String> orderNames = new ArrayList<>();
+    ArrayList<Integer> orderPrices = new ArrayList<>();
+    ArrayList<Integer> orderQtys = new ArrayList<>();
+
+    static int orderCount = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,9 +37,8 @@ public class OrderPage extends AppCompatActivity {
         itemPrice = findViewById(R.id.OrderItemPrice);
         itemPrice.setText("Rp " + getIntent().getStringExtra("OrderPrice"));
 
-        //for debugging purpose
-        Log.d("Order Name", getIntent().getStringExtra("OrderName"));
-        Log.d("Order Price", getIntent().getStringExtra("OrderPrice"));
+        edittxtQty = (EditText) findViewById(R.id.orderQty);
+
 
         //order more
         orderMore = findViewById(R.id.OrderMoreBtn);
@@ -39,7 +46,50 @@ public class OrderPage extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent OrderMore = new Intent(OrderPage.this, MainActivity.class);
-                startActivity(OrderMore);
+
+
+                if(Integer.parseInt(edittxtQty.getText().toString()) == 0 || edittxtQty == null){
+
+                   // for debugging purpose
+                    Log.d("Order Name", getIntent().getStringExtra("OrderName"));
+                    Log.d("Order Price", getIntent().getStringExtra("OrderPrice"));
+                    Log.d("Order Qty", edittxtQty.getText().toString());
+
+                    String warningTxt = "The Quantity can't be zero or blank!";
+                    Toast.makeText(getApplicationContext(), warningTxt, Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    //for debugging purpose
+                    Log.d("Order Name", getIntent().getStringExtra("OrderName"));
+                    Log.d("Order Price", getIntent().getStringExtra("OrderPrice"));
+                    Log.d("Order Qty", edittxtQty.getText().toString());
+
+                    //insert data ke AL
+                    orderNames.add(getIntent().getStringExtra("OrderName"));
+                    orderPrices.add(Integer.parseInt(getIntent().getStringExtra("OrderPrice")));
+                    orderQtys.add(Integer.parseInt(edittxtQty.getText().toString()));
+
+                    Log.d("Order no", String.valueOf(orderCount));
+                    Log.d("Order Name", orderNames.get(orderCount));
+                    Log.d("Order Price", String.valueOf(orderPrices.get(orderCount)));
+                    Log.d("Order Qty", String.valueOf(orderQtys.get(orderCount)));
+
+
+                    //send data to myorders
+                    Intent addOrders = new Intent(OrderPage.this, MyOrders_Page.class);
+
+                    addOrders.putExtra("OrderName", orderNames.get(orderCount));
+                    addOrders.putExtra("OrderPrice", orderPrices.get(orderCount).toString());
+                    addOrders.putExtra("OrderQty", orderQtys.get(orderCount).toString());
+
+                    ((OrderPage) OrderPage.this).startActivity(addOrders);
+
+                    //closing statements
+                    String outputMsg = "Order Recorded!";
+                    Toast.makeText(getApplicationContext(), outputMsg, Toast.LENGTH_SHORT).show();
+                    orderCount++;
+                    startActivity(OrderMore);
+                }
             }
         });
 

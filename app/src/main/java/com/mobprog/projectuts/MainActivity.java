@@ -10,7 +10,6 @@ import android.widget.Button;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-
     Button foodBtn, snackBtn, drinksBtn, myOrders;
 
     //need rework
