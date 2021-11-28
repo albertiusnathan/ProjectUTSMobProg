@@ -22,7 +22,7 @@ public class OrderPage extends AppCompatActivity {
     ArrayList<Integer> orderPrices = new ArrayList<>();
     ArrayList<Integer> orderQtys = new ArrayList<>();
 
-    static int orderCount = 0;
+    int orderCount = getTotalCount();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,20 +75,19 @@ public class OrderPage extends AppCompatActivity {
                     Log.d("Order Qty", String.valueOf(orderQtys.get(orderCount)));
 
 
-                    //send data to myorders
-                    Intent addOrders = new Intent(OrderPage.this, MyOrders_Page.class);
-
-                    addOrders.putExtra("OrderName", orderNames.get(orderCount));
-                    addOrders.putExtra("OrderPrice", orderPrices.get(orderCount).toString());
-                    addOrders.putExtra("OrderQty", orderQtys.get(orderCount).toString());
-
-                    ((OrderPage) OrderPage.this).startActivity(addOrders);
+                    OrderMore.putExtra("OrderName", orderNames.get(orderCount));
+                    OrderMore.putExtra("OrderPrice", orderPrices.get(orderCount).toString());
+                    OrderMore.putExtra("OrderQty", orderQtys.get(orderCount).toString());
 
                     //closing statements
                     String outputMsg = "Order Recorded!";
                     Toast.makeText(getApplicationContext(), outputMsg, Toast.LENGTH_SHORT).show();
-                    orderCount++;
-                    startActivity(OrderMore);
+                    //orderCount++;
+
+                    ((OrderPage) OrderPage.this).startActivity(OrderMore);
+
+
+                    //startActivity(OrderMore);
                 }
             }
         });
@@ -102,5 +101,10 @@ public class OrderPage extends AppCompatActivity {
                 startActivity(orderIntent);
             }
         });
+    }
+
+    public int getTotalCount(){
+        Log.d("ArraySize", String.valueOf(orderNames.size()));
+        return orderNames.size();
     }
 }
