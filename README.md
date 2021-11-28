@@ -18,11 +18,11 @@ Berikut adalah fitur-fitur yang telah dikerjakan pada proyek ini
   - Foods Page
   - Drinks Page
   - Snacks Page
+  - Ordering Feature (IN PROGRESS)
+  - Order Payment (IN PROGRESS)
 
 
 FITUR-FITUR YANG BELUM SELESAI
 -----------------------------
 Dalam pengembangannya, ada beberapa fitur yang masih belum selesai dikembangkan. Fitur-fitur tersebut antara lain sebagai berikut.
- - Ordering Feature
- - Order Payment
  - Order Done
