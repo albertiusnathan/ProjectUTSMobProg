@@ -26,6 +26,8 @@ public class OrderPage extends AppCompatActivity {
 
     TextView itemPrice, itemName;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,7 +41,6 @@ public class OrderPage extends AppCompatActivity {
 
         edittxtQty = (EditText) findViewById(R.id.orderQty);
 
-
         //order more
         orderMore = findViewById(R.id.OrderMoreBtn);
         orderMore.setOnClickListener(new View.OnClickListener() {
@@ -47,9 +48,11 @@ public class OrderPage extends AppCompatActivity {
             public void onClick(View view) {
                 Intent OrderMore = new Intent(OrderPage.this, MainActivity.class);
 
+                String OrderNameStr = getIntent().getStringExtra("OrderName");
+                Integer OrderPriceInt = Integer.parseInt(getIntent().getStringExtra("OrderPrice")) ;
+                Integer OrderQtyInt = Integer.parseInt(edittxtQty.getText().toString());
 
                 if(Integer.parseInt(edittxtQty.getText().toString()) == 0 || edittxtQty == null){
-
                    // for debugging purpose
                     Log.d("Order Name", getIntent().getStringExtra("OrderName"));
                     Log.d("Order Price", getIntent().getStringExtra("OrderPrice"));
@@ -59,6 +62,7 @@ public class OrderPage extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), warningTxt, Toast.LENGTH_SHORT).show();
                 }
                 else {
+
                     //for debugging purpose
                     Log.d("Order Number", String.valueOf(getTotalCount()));
                     Log.d("Order Name", getIntent().getStringExtra("OrderName"));
@@ -66,14 +70,14 @@ public class OrderPage extends AppCompatActivity {
                     Log.d("Order Qty", edittxtQty.getText().toString());
 
                     //insert data ke AL
-//                    orderNames.add(getIntent().getStringExtra("OrderName"));
-//                    orderPrices.add(Integer.parseInt(getIntent().getStringExtra("OrderPrice")));
-//                    orderQtys.add(Integer.parseInt(edittxtQty.getText().toString()));
-//
-//                    Log.d("Order no", String.valueOf(getTotalCount()));
-//                    Log.d("Order Name", orderNames.get(getTotalCount()));
-//                    Log.d("Order Price", String.valueOf(orderPrices.get(getTotalCount())));
-//                    Log.d("Order Qty", String.valueOf(orderQtys.get(getTotalCount())));
+                    orderNames.add(OrderNameStr);
+                    orderPrices.add(OrderPriceInt);
+                    orderQtys.add(OrderQtyInt);
+
+                    Log.d("Order no", String.valueOf(getTotalCount()));
+                    Log.d("Order Name", orderNames.get(getTotalCount()-1));
+                    Log.d("Order Price", String.valueOf(orderPrices.get(getTotalCount()-1)));
+                    Log.d("Order Qty", String.valueOf(orderQtys.get(getTotalCount()-1)));
 
 
 //                    OrderMore.putExtra("OrderName", orderNames.get(getTotalCount()));
@@ -90,18 +94,36 @@ public class OrderPage extends AppCompatActivity {
 
                     //startActivity(OrderMore);
                 }
-            }
-        });
 
-        //langsung ke myorder
+
+                    }
+                });
+
         myOrders = findViewById(R.id.shoppingbag);
         myOrders.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent orderIntent = new Intent(OrderPage.this, MyOrders_Page.class);
+
+                String OrderNameStr = getIntent().getStringExtra("OrderName");
+                Integer OrderPriceInt = Integer.parseInt(getIntent().getStringExtra("OrderPrice")) ;
+                Integer OrderQtyInt = Integer.parseInt(edittxtQty.getText().toString());
+
+                orderNames.add(OrderNameStr);
+                orderPrices.add(OrderPriceInt);
+                orderQtys.add(OrderQtyInt);
+
+                orderIntent.putExtra("OrderNameAL", orderNames);
+                orderIntent.putExtra("OrderPriceAL", orderPrices);
+                orderIntent.putExtra("OrderNameAL", orderQtys);
+
                 startActivity(orderIntent);
             }
         });
+
+
+        //langsung ke myorder
+
     }
 
     public int getTotalCount(){

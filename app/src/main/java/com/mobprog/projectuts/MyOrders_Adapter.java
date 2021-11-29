@@ -13,9 +13,9 @@ import java.util.ArrayList;
 
 public class MyOrders_Adapter extends RecyclerView.Adapter<MyOrders_Adapter.MyOrdersViewHolder> {
     Context context;
-    ArrayList<String> orderNames;
-    ArrayList<Integer> orderPrices;
-    ArrayList<Integer> orderQtys;
+    ArrayList<String> orderNames = new ArrayList<>();
+    ArrayList<Integer> orderPrices = new ArrayList<>();
+    ArrayList<Integer> orderQtys = new ArrayList<>();
     Integer orderCount;
 
     public MyOrders_Adapter(Context context, ArrayList<String> orderNames, ArrayList<Integer> orderPrices, ArrayList<Integer> orderQtys, Integer orderCount) {
@@ -40,9 +40,9 @@ public class MyOrders_Adapter extends RecyclerView.Adapter<MyOrders_Adapter.MyOr
 //        String orderNumber = orderNames.get(orderCount);
 //        holder.myOrderViewLayout.setText(orderNames.get(orderCount) + "\n" + "Rp "+ orderPrices.get(orderCount));
 
-        holder.getItemName().setText(orderNames.get(position));
-        holder.getItemPrice().setText(orderPrices.get(position));
-        holder.getItemQty().setText(orderQtys.get(position));
+        holder.itemName.setText(orderNames.get(position)+"");
+        holder.itemPrice.setText(orderPrices.get(position)+"");
+        holder.itemQty.setText(orderQtys.get(position)+"");
 
 //        holder.myOrderViewLayout.setOnClickListener(new View.OnClickListener() {
 //            @Override

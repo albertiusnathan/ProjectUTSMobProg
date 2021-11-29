@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -17,9 +18,9 @@ public class MyOrders_Page extends AppCompatActivity {
     RecyclerView myOrderRecycler;
     MyOrders_Adapter myOrdersAdapter;
 
-    ArrayList<String> orderNames;
-    ArrayList<Integer> orderPrices;
-    ArrayList<Integer> orderQtys;
+    ArrayList<String> orderNames = new ArrayList<>();
+    ArrayList<Integer> orderPrices = new ArrayList<>();
+    ArrayList<Integer> orderQtys = new ArrayList<>();
 
     Integer orderCount;
 
@@ -31,9 +32,13 @@ public class MyOrders_Page extends AppCompatActivity {
         setContentView(R.layout.activity_my_orders_page);
         myOrderRecycler = findViewById(R.id.myOrderRecyclerView);
 
-        orderNames = getIntent().getStringArrayListExtra("OrderName");
-        orderPrices = getIntent().getIntegerArrayListExtra("OrderPrice");
-        orderQtys = getIntent().getIntegerArrayListExtra("OrderQty");
+        orderNames = (ArrayList<String>) getIntent().getSerializableExtra("OrderNameAL");
+        orderPrices = (ArrayList<Integer>) getIntent().getSerializableExtra("OrderPriceAL");
+        orderQtys = (ArrayList<Integer>) getIntent().getSerializableExtra("OrderQtyAL");
+
+        Log.d("OrderName", String.valueOf(orderNames));
+        Log.d("OrderPrices", String.valueOf(orderPrices));
+        Log.d("OrderQty", String.valueOf(orderQtys));
 
 //        orderPrices.add(Integer.parseInt(getIntent().getStringExtra("OrderPrice")));
 //        orderQtys.add(Integer.parseInt(getIntent().getStringExtra("OrderQty")));
@@ -43,14 +48,14 @@ public class MyOrders_Page extends AppCompatActivity {
         myOrderRecycler.setAdapter(myOrdersAdapter);
 
 
-        //go to home button
-        orderDone = findViewById(R.id.goHomeBtn);
-        orderDone.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent orderDoneIntent = new Intent(MyOrders_Page.this, MainActivity.class);
-                startActivity(orderDoneIntent);
-            }
-        });
+//        //go to home button
+//        orderDone = findViewById(R.id.goHomeBtn);
+//        orderDone.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent orderDoneIntent = new Intent(MyOrders_Page.this, MainActivity.class);
+//                startActivity(orderDoneIntent);
+//            }
+//        });
     }
 }
