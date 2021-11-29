@@ -25,7 +25,6 @@ public class FoodsPage extends AppCompatActivity {
         setContentView(R.layout.foods);
         foodRecycler = findViewById(R.id.foodRecyclerView);
 
-
         //set multiple hashmap untuk nambah makanan
         HashMap<String, String>food1 = new HashMap<>();
         food1.put("FoodName", "Nasi Goreng");

@@ -26,7 +26,6 @@ public class DrinksPage extends AppCompatActivity {
         setContentView(R.layout.activity_drinks_page);
         drinkRecycler = findViewById(R.id.drinksRecyclerView);
 
-
         //set multiple hashmap untuk nambah makanan
         HashMap<String, String>drink1 = new HashMap<>();
         drink1.put("DrinkName", "Smoothie Ichigo");

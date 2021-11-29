@@ -25,7 +25,6 @@ public class SnacksPage extends AppCompatActivity {
         setContentView(R.layout.activity_snacks_page);
         snackRecycler = findViewById(R.id.snacksRecyclerView);
 
-
         //set multiple hashmap untuk nambah makanan
         HashMap<String, String>snack1 = new HashMap<>();
         snack1.put("SnackName", "Risoles Mayones");

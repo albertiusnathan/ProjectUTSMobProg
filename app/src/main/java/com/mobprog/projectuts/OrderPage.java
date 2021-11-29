@@ -24,12 +24,12 @@ public class OrderPage extends AppCompatActivity {
 
     int orderCount = getTotalCount();
 
+    TextView itemPrice, itemName;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_order_page);
-
-        TextView itemPrice, itemName;
 
         itemName = findViewById(R.id.OrderItemName);
         itemName.setText(getIntent().getStringExtra("OrderName"));
@@ -60,24 +60,25 @@ public class OrderPage extends AppCompatActivity {
                 }
                 else {
                     //for debugging purpose
+                    Log.d("Order Number", String.valueOf(getTotalCount()));
                     Log.d("Order Name", getIntent().getStringExtra("OrderName"));
                     Log.d("Order Price", getIntent().getStringExtra("OrderPrice"));
                     Log.d("Order Qty", edittxtQty.getText().toString());
 
                     //insert data ke AL
-                    orderNames.add(getIntent().getStringExtra("OrderName"));
-                    orderPrices.add(Integer.parseInt(getIntent().getStringExtra("OrderPrice")));
-                    orderQtys.add(Integer.parseInt(edittxtQty.getText().toString()));
+//                    orderNames.add(getIntent().getStringExtra("OrderName"));
+//                    orderPrices.add(Integer.parseInt(getIntent().getStringExtra("OrderPrice")));
+//                    orderQtys.add(Integer.parseInt(edittxtQty.getText().toString()));
+//
+//                    Log.d("Order no", String.valueOf(getTotalCount()));
+//                    Log.d("Order Name", orderNames.get(getTotalCount()));
+//                    Log.d("Order Price", String.valueOf(orderPrices.get(getTotalCount())));
+//                    Log.d("Order Qty", String.valueOf(orderQtys.get(getTotalCount())));
 
-                    Log.d("Order no", String.valueOf(orderCount));
-                    Log.d("Order Name", orderNames.get(orderCount));
-                    Log.d("Order Price", String.valueOf(orderPrices.get(orderCount)));
-                    Log.d("Order Qty", String.valueOf(orderQtys.get(orderCount)));
 
-
-                    OrderMore.putExtra("OrderName", orderNames.get(orderCount));
-                    OrderMore.putExtra("OrderPrice", orderPrices.get(orderCount).toString());
-                    OrderMore.putExtra("OrderQty", orderQtys.get(orderCount).toString());
+//                    OrderMore.putExtra("OrderName", orderNames.get(getTotalCount()));
+//                    OrderMore.putExtra("OrderPrice", orderPrices.get(getTotalCount()).toString());
+//                    OrderMore.putExtra("OrderQty", orderQtys.get(getTotalCount()).toString());
 
                     //closing statements
                     String outputMsg = "Order Recorded!";

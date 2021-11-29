@@ -13,9 +13,9 @@ import java.util.ArrayList;
 
 public class MyOrders_Adapter extends RecyclerView.Adapter<MyOrders_Adapter.MyOrdersViewHolder> {
     Context context;
-    ArrayList<String> orderNames = new ArrayList<>();
-    ArrayList<Integer> orderPrices = new ArrayList<>();
-    ArrayList<Integer> orderQtys = new ArrayList<>();
+    ArrayList<String> orderNames;
+    ArrayList<Integer> orderPrices;
+    ArrayList<Integer> orderQtys;
     Integer orderCount;
 
     public MyOrders_Adapter(Context context, ArrayList<String> orderNames, ArrayList<Integer> orderPrices, ArrayList<Integer> orderQtys, Integer orderCount) {

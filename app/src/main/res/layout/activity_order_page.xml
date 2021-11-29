@@ -96,6 +96,7 @@
             android:layout_below="@id/OrderItemPrice"
             android:layout_alignParentEnd="true"
             android:text="@string/order_more"
+            android:textColor="#FFFFFF"
             android:textAllCaps="false"
             android:textStyle="bold"
             android:fontFamily="sans-serif"
